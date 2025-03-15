@@ -152,7 +152,6 @@ function checkEmail(){ // Assuming we can't use regular expressions since they w
     let email = document.getElementById("email");
 
     let pastAt = false;
-    let pastDot = false;
     let pastAtCount = 0;
     
     let i = 0
@@ -176,12 +175,11 @@ function checkEmail(){ // Assuming we can't use regular expressions since they w
             return [false, "Email cannot contain multiple @ symbols"];
         }
 
-        if (ascii == '.' && pastAt && pastAtCount){
-            pastDot = true;
+        if (ascii == '.' && pastAt){
             break;
         }
 
-        if (pastAt && ascii != '@'){
+        else if (pastAt && ascii != '@'){
             pastAtCount += 1;
         }
     }

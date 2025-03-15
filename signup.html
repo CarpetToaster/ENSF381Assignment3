@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - LMS</title>
+    <title>Sign up - LMS</title>
 </head>
 <body>
     
@@ -18,8 +18,8 @@
             <a href="index.html">Homepage</a>
         </nav>
     </div>
-    <main class="main_login" id="loginArea">
-        <h2>LMS Login</h2>
+    <main class="main_login" id="signupArea">
+        <h2>Sign Up</h2>
         <form>
             <div class="form">
                 <label for="username">Username:</label>
@@ -27,17 +27,25 @@
                 
                 <label for="password">Password:</label>
                 <input class="input_field" type="password" id="password" name="password" required><br><br>
+
+                <label for="confirm">Confirm Password:</label>
+                <input class="input_field" type="password" id="confirm" name="confirm" required><br><br>
+
+                <label for="email">Email:</label>
+                <input class="input_field" type="email" id="email" name="email" required><br><br>
+
+                <button class="button_login" type="button" id ="submitButton" onClick="confirmSignup()">Sign Up</button>
             </div>
-            <button class="button_login" type="button" id ="submitButton" onClick="confirmLogin()">Login</button><br><br>
-            <a href="#">Forgot Password?</a><br>
-            <a href="signup.html">Don't have an account? Sign up</a>
         </form>
-        
+
+        <div id="messageField"></div>
+
+        <a href="login.html">Already have an account? Login here</a><br><br><br>
         
     </main>
     <footer>
         <p>&copy; 2025 LMS. All rights reserved.</p>
     </footer>
-    <script src="login.js"></script>
+    <script src="signup.js"></script>
 </body>
 </html>

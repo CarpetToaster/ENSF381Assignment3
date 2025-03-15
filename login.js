@@ -8,8 +8,6 @@ async function confirmLogin(){
         const results = await fetch("https://jsonplaceholder.typicode.com/users");
         const data = await results.json();
 
-        let success = false;
-
         for (let i = 0; i < data.length; i++){
             console.log(data[i]);
             if (data[i].username == userField.value && data[i].email == passField.value){
@@ -38,8 +36,8 @@ function displayMessage(success){
 
 
     if (success){
-       show.textContent = messageSuccess;
-            setTimeout(() =>{
+        show.textContent = messageSuccess;
+        setTimeout(() =>{
             window.location.href = "course_view.html";
         }, 2000)
     } 
@@ -50,8 +48,6 @@ function displayMessage(success){
 
     if (!triedLogin){
         main.appendChild(show);
-        let main2 = document.getElementById("loginArea");
-        console.log(main2);
         triedLogin = true;
     }
 

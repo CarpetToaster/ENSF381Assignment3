@@ -25,12 +25,10 @@ function moveToEnrolled(courseTile) {
     let lastRow = rows.length > 0 ? rows[rows.length - 1] : null;
 
     let newCell = courseTile;
+    newCell.id = 'e';
 
     if (lastRow && lastRow.children.length === 3) {
-        lastRow = enrolledCoursesTable.insertRow(); 
-        for (let i = 0; i < 3; i++) {
-            lastRow.insertCell();
-        }
+        lastRow = enrolledCoursesTable.insertRow();
     }
 
     lastRow.appendChild(newCell);

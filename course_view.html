@@ -37,8 +37,8 @@
         </div>
       
         <hr>
-        <div class="courseViewTables">
-            <table>
+        <div class="courseViewTables" >
+            <table id="enrolledTable">
                 <tr>
                     <td class="tile" id="e">
                         <img src="course1.jpg">
@@ -134,8 +134,8 @@
                             <p>
                                 Course Code: DS102
                             </p>
-                            <button class="button_a">Accept</button>
-                            <button class="button_d">Decline</button>
+                            <button class="button_a" onclick="acceptCourse(this)">Accept</button>
+                            <button class="button_d" onclick="declineCourse(this)">Decline</button>
                         </div>
                     </td>
                     <td class="tile" id="p">
@@ -147,16 +147,18 @@
                             <p>
                                 Course Code: ML105
                             </p>
-                            <button class="button_a">Accept</button>
-                            <button class="button_d">Decline</button>
+                            <button class="button_a" onclick="acceptCourse(this)">Accept</button>
+                            <button class="button_d" onclick="declineCourse(this)">Decline</button>
                         </div>
                     </td>
                     
                 </tr>
             </table>
         </div>
+        <script src="course_view.js"></script>
     </main>
     <footer>
         <p>&copy; 2025 LMS. All rights reserved.</p>
     </footer>
+    
 </html>
